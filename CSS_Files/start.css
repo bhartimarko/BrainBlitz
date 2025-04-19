@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Recursive:wght@300..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Recursive:wght@300..1000&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(to right,#c6ffde,#00e78e);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow-y: hidden;
+}
+
+.container{
+  width: 500px;
+  text-align: center;
+  height: 300px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  animation-name: slideMsg;
+  animation-duration: 1.7s;
+  animation-delay: 0s;
+}
+
+.container h1{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 10px;
+  position: relative;
+}
+
+.heading::first-letter{
+  font-size: 1.4em;
+  line-height: 1;
+  color: teal;
+  font-family: 'Georgia', serif;
+}
+
+p{
+  margin: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.buttons{
+  margin: 5px;
+}
+
+button{
+  margin: 5px;
+  width: 4em;
+  height: 2.6em;
+  border: none;
+  border-radius: 5px;
+  font-family: cursive;
+}
+
+@keyframes slideMsg {
+  from{
+    top: 0;
+    opacity: 0;
+  }
+
+  to{
+    top: 27.5%;
+    opacity: 1;
+  }
+}
