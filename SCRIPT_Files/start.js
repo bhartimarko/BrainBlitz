@@ -1,37 +1,21 @@
-new FinisherHeader({
-    "count": 10,
-    "size": {
-      "min": 659,
-      "max": 1222,
-      "pulse": 1.6
-    },
-    "speed": {
-      "x": {
-        "min": 0.1,
-        "max": 0.6
-      },
-      "y": {
-        "min": 0.1,
-        "max": 0.6
-      }
-    },
-    "colors": {
-      "background": "#f1f622",
-      "particles": [
-        "#fbff48",
-        "#000000",
-        "#2235e5",
-        "#ccc293",
-        "#ca7373"
-      ]
-    },
-    "blending": "overlay",
-    "opacity": {
-      "center": 0.5,
-      "edge": 0.05
-    },
-    "skew": -2,
-    "shapes": [
-      "c"
-    ]
-  });
+//pehla function or button start k liye 
+const startBtn = startButton();
+
+function startButton(){
+    const btn = document.querySelector("#start-btn");
+    btn.addEventListener("click", function(){
+        window.location.href = "/BrainBlitz/HTML_Files/math.html"
+    })
+}
+
+//or dusra function or button quit k liye 
+const quitBtn = quitButton();
+function quitButton() {
+    const btn =  document.querySelector("#quit-btn")
+    btn.addEventListener("click", ()=>{
+        alert("Thanks for visiting BrainBlitz! Come back soon.");
+    })
+}
+
+
+
