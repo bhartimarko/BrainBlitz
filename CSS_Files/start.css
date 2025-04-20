@@ -8,12 +8,23 @@
 }
 
 body{
-  background: linear-gradient(to right,#c6ffde,#00e78e);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-size: cover;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   place-items: center;
-  overflow-y: hidden;
+  color: antiquewhite;
+  overflow-x: hidden;
+  background-color: #000000;
+  background-image:radial-gradient(circle at 20% 30%, rgba(251, 89, 189, 0.25), transparent 40%),
+                  radial-gradient(circle at 80% 25%, rgba(18, 121, 129, 0.288), transparent 50%),
+                  radial-gradient(circle at 50% 80%, rgba(82, 230, 82, 0.2), transparent 40%);
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  animation: animateBlobBg 4s infinite ease-in-out;
 }
 
 .container{
@@ -30,18 +41,16 @@ body{
   animation-delay: 0s;
 }
 
-.container h1{
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  margin: 10px;
-  position: relative;
-}
-
-.heading::first-letter{
-  font-size: 1.4em;
-  line-height: 1;
-  color: teal;
-  font-family: 'Georgia', serif;
+.glow-text {
+  font-family: 'Arial', sans-serif;
+  color: black;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow:
+    0 0 10px #ff6ec7,
+    0 0 20px #00f0ff,
+    0 0 30px #7eff7e,
+    0 0 40px #ff6ec7;
 }
 
 p{
@@ -73,5 +82,33 @@ button{
   to{
     top: 27.5%;
     opacity: 1;
+  }
+}
+
+.start, .quit {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 90%;
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 5em;
+    height: 2.5em;
+  }
+}
+
+@keyframes animateBlobBg {
+  0% {
+    background-position: 0% 0%, 100% 0%, 50% 100%;
+  }
+  50% {
+    background-position: 100% 100%, 0% 100%, 50% 0%;
+  }
+  100% {
+    background-position: 0% 0%, 100% 0%, 50% 100%;
   }
 }
