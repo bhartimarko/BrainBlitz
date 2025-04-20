@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Recursive:wght@300..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(-45deg, #251219, #402c33, #251219);
+    background-size: 400% 400%;
+    width: 100vw;
+    min-height: 100vh;
+    color: #dbd6d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: gradientMove 15s ease infinite;
+}
+
+.section-1{
+    /* visibility: hidden; */
+    width: 500px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 1s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    animation: pulseGlow 2s infinite alternate;
+}
+
+h1{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding-top: 10px;
+}
+
+h1::first-letter{
+    font-size: 2rem;
+    color: #a1b300;
+}
+
+p{
+   width: 95%;
+   height: 130px;   
+   margin: auto; 
+   font-family: "Recursive", sans-serif;
+}
+
+b{
+    color: #e5ea80;
+}
+
+.buttons{
+    width: 200px;
+    height: 100px;
+    margin: 0.7em;
+    display: grid;
+    justify-content: space-around;
+}
+
+.btn{
+    border-radius: 8px;
+    width: 90px;
+    height: 1.8em;
+    margin: 5px;
+    border: none;
+    color: #240000;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.btn:hover{
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+#start{
+    background-color: #a1b300;
+}
+
+#quit{
+    background-color: #e6361c;
+}
+
+#quit-2{
+    background-color: #e6361c;
+}
+
+#next-game{
+    background-color: #00787d;
+}
+
+.section-2{
+  display: none;  /*staring me ni dikhai dega*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulseGlow {
+    from {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-1 {
+        width: 90%;
+        height: auto;
+        padding: 1em;
+    }
+
+    p {
+        font-size: 0.9em;
+        height: auto;
+    }
+
+    .buttons {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        height: 2.2em;
+        font-size: 1em;
+    }
+}

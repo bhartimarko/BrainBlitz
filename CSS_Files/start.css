@@ -71,8 +71,13 @@ button{
   border: none;
   border-radius: 5px;
   font-family: cursive;
+  transition: all 1s ease;
 }
 
+button:hover{
+  box-shadow: 0 0 20px 8px rgba(193, 213, 193, 0.6);
+  transform: scale(1);
+}
 @keyframes slideMsg {
   from{
     top: 0;
