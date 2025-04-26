@@ -66,7 +66,7 @@ b{
 .btn{
     border-radius: 8px;
     width: 90px;
-    height: 1.8em;
+    height: 2em;
     margin: 5px;
     border: none;
     color: #240000;
@@ -188,20 +188,6 @@ b{
     visibility: hidden;
 }
 
-/* .question-box {
-    width: 100%;
-    height: auto;
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    word-wrap: break-word;
-} */
-
-
 .question-box, #question{
    text-align: center;
 }
@@ -279,45 +265,3 @@ b{
 #result-screen button:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
-/* 
-@media screen and (max-width: 768px) {
-    .game-container {
-        width: 90%;
-        height: auto;
-        padding: 1rem;
-    }
-
-    .option-btn {
-        width: 3rem;
-        height: 1.5rem;
-        font-size: 0.7em;
-    }
-
-    .question-box {
-        font-size: 1.2rem;
-    }
-
-    .timer-and-score {
-        font-size: 1.2em;
-        padding: 10px;
-    }
-
-    #result-screen {
-        font-size: 1.2em;
-        top: 40px;
-    }
-
-    #result-screen button {
-        font-size: 1em;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .game-container {
-        width: 450px;
-    }
-
-    .question-box {
-        font-size: 1.4rem;
-    }
-} */
