@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .result-container {
+    background: #fff;
+    padding: 30px;
+    margin: auto;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+  
+  .scores p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  #playAgainBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #playAgainBtn:hover {
+    background-color: #45a049;
+  }
+  

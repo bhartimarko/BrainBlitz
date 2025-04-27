@@ -1,0 +1,82 @@
+/* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+  
+  .game-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #333;
+  }
+  
+  #level-title {
+    margin: 20px 0;
+    font-size: 22px;
+    color: #555;
+  }
+  
+  .word-sequence {
+    margin: 20px 0;
+    font-size: 20px;
+    color: #444;
+    min-height: 50px;
+  }
+  
+  .input-container {
+    margin: 20px 0;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  #submit-btn, #start-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #a18cd1;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  #submit-btn:hover, #start-btn:hover {
+    background-color: #fbc2eb;
+  }
+  
+  #message {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
