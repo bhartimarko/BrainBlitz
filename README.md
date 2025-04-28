@@ -32,7 +32,7 @@ To run the BrainBlitz game on your local machine:
 
 <h3>Clone the repository:</h3>
 git clone
- <[BrainBlitz Repository](https://github.com/bhartimarko/BrainBlitz.git)>
+ [BrainBlitz Repository](https://github.com/bhartimarko/BrainBlitz.git)
 <h2>Navigate to the project directory:</h2>
 
 cd BrainBlitz
