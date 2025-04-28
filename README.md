@@ -31,16 +31,9 @@ Vanilla JavaScript
 To run the BrainBlitz game on your local machine:
 
 <h3>Clone the repository:</h3>
-
-bash
-Copy
-Edit
 git clone <[https://github.com/bhartimarko/BrainBlitz.git]>
 <h2>Navigate to the project directory:</h2>
 
-bash
-Copy
-Edit
 cd BrainBlitz
 Open the index.html file in your web browser to start playing!
 
