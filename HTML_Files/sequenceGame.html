@@ -7,23 +7,31 @@
   <link rel="stylesheet" href="/BrainBlitz/CSS_Files/sequenceGame.css">
 </head>
 <body>
-  <div class="game-container">
+
+  <!-- Section 1: Welcome -->
+  <section id="section-1" class="section">
     <h1>Study Memory Game</h1>
-    <p id="level-title">Press Start to Begin</p>
-
-    <div class="word-sequence" id="word-sequence">
-      <!-- Words will appear here -->
+    <p>Memorize the sequence of study terms and type them in order!</p>
+    <div class="buttons">
+      <button id="start-btn">Start Game</button>
+      <button id="quit-btn-1">Quit</button>
     </div>
+  </section>
 
+  <!-- Section 2: Game -->
+  <section id="section-2" class="section hidden">
+    <h2 id="level-title">Level 1</h2>
+    <div class="word-sequence" id="word-sequence">Words will appear here</div>
     <div class="input-container">
-      <input type="text" id="user-input" placeholder="Type the sequence...">
+      <input type="text" id="user-input" placeholder="Type the sequence..." />
       <button id="submit-btn">Submit</button>
     </div>
-
-    <button id="start-btn">Start Game</button>
-
     <p id="message"></p>
-  </div>
+    <div class="buttons">
+      <button id="restart-btn">Restart</button>
+      <button id="quit-btn-2">Quit</button>
+    </div>
+  </section>
 
   <script src="/BrainBlitz/SCRIPT_Files/sequenceGame.js"></script>
 </body>

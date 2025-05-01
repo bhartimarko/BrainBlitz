@@ -1,68 +1,87 @@
-// script.js
+const studyWords = [
+  "Atom", "Molecule", "Force", "Gravity", "Energy",
+  "Photosynthesis", "Neuron", "Fraction", "Velocity", "Density"
+];
 
-// 1. Study related words
-const studyWords = ["Atom", "Molecule", "Force", "Gravity", "Energy", "Photosynthesis", "Neuron", "Fraction", "Velocity", "Density"];
-
-// 2. Game sequence
 let gameSequence = [];
 let level = 0;
-let started = false;
 
-// 3. Start Button
-document.getElementById("start-btn").addEventListener("click", function() {
-  if (!started) {
-    level = 0;
-    gameSequence = [];
-    document.getElementById("message").innerText = "";
-    nextLevel();
-    started = true;
-    this.style.display = "none"; // Hide Start Button
-  }
+const section1 = document.getElementById("section-1");
+const section2 = document.getElementById("section-2");
+
+const levelTitle = document.getElementById("level-title");
+const wordSequenceEl = document.getElementById("word-sequence");
+const userInput = document.getElementById("user-input");
+const message = document.getElementById("message");
+
+// Start Game
+document.getElementById("start-btn").addEventListener("click", () => {
+  switchToSection2();
+  startGame();
 });
 
-// 4. Next Level function
-function nextLevel() {
-  level++;
-  document.getElementById("level-title").innerText = `Level ${level}`;
-  document.getElementById("user-input").value = "";
+// Quit from Section 1
+document.getElementById("quit-btn-1").addEventListener("click", () => {
+  window.location.href = "/BrainBlitz/HTML_Files/index.html";
+});
 
-  // Add new random word
-  let randomWord = studyWords[Math.floor(Math.random() * studyWords.length)];
-  gameSequence.push(randomWord);
+// Quit from Section 2
+document.getElementById("quit-btn-2").addEventListener("click", () => {
+  switchToSection1();
+});
 
-  showSequence();
-}
+// Restart Game from Section 2
+document.getElementById("restart-btn").addEventListener("click", () => {
+  startGame();
+});
 
-// 5. Show Sequence to user
-function showSequence() {
-  let sequenceText = gameSequence.join(" ➔ ");
-  document.getElementById("word-sequence").innerText = sequenceText;
+// Submit Answer
+document.getElementById("submit-btn").addEventListener("click", () => {
+  const userAnswer = userInput.value.trim().toLowerCase();
+  const correctAnswer = gameSequence.join(" ").toLowerCase();
 
-  // Hide sequence after 3 seconds
-  setTimeout(() => {
-    document.getElementById("word-sequence").innerText = "Now type the sequence!";
-  }, 3000);
-}
-
-// 6. Submit Button
-document.getElementById("submit-btn").addEventListener("click", function() {
-  let userAnswer = document.getElementById("user-input").value.trim();
-  let correctAnswer = gameSequence.join(" ").toLowerCase();
-
-  if (userAnswer.toLowerCase() === correctAnswer) {
-    document.getElementById("message").innerText = "✅ Correct! Next Level!";
+  if (userAnswer === correctAnswer) {
+    message.textContent = "✅ Correct! Next level!";
     setTimeout(() => {
       nextLevel();
     }, 1000);
   } else {
-    document.getElementById("message").innerText = "❌ Wrong! Press Start to try again!";
-    startOver();
+    message.textContent = "❌ Wrong! Press Restart.";
   }
 });
 
-// 7. Reset Game
-function startOver() {
-  started = false;
-  document.getElementById("start-btn").style.display = "block"; // Show Start button again
+// Core Game Functions
+function startGame() {
+  level = 0;
+  gameSequence = [];
+  message.textContent = "";
+  userInput.value = "";
+  nextLevel();
 }
 
+function nextLevel() {
+  level++;
+  levelTitle.textContent = `Level ${level}`;
+  userInput.value = "";
+  const randomWord = studyWords[Math.floor(Math.random() * studyWords.length)];
+  gameSequence.push(randomWord);
+  showSequence();
+}
+
+function showSequence() {
+  wordSequenceEl.textContent = gameSequence.join(" ➔ ");
+  setTimeout(() => {
+    wordSequenceEl.textContent = "Now type the sequence!";
+  }, 1000);
+}
+
+// Section Switching
+function switchToSection1() {
+  section1.classList.remove("hidden");
+  section2.classList.add("hidden");
+}
+
+function switchToSection2() {
+  section1.classList.add("hidden");
+  section2.classList.remove("hidden");
+}

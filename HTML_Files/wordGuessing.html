@@ -4,24 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/BrainBlitz/CSS_Files/wordGuessing.css">
-    <title>Document</title>
+    <title>BrainBlitz-Game</title>
 </head>
 <body>
-    <div class="game-container">
-        <h1>Word Guessing Game</h1>
-        <div id="word-display"></div>
-        
-        <input type="text" id="letter-input" maxlength="1" placeholder="Guess a letter " />
-        <button id="guess-btn">Guess</button>
-    
-        <div class="info">
-          <p id="chances">Chances left: 6</p>
-          <p id="message"></p>
+  
+  <div class="main-container">
+    <!-- Welcome Section -->
+    <section id="welcome-section">
+      <div class="box">
+        <h1>Welcome to Word Guessing Game!</h1>
+        <p>Only guess the missing letters within 60 seconds. Tricky words ahead!</p>
+        <div class="buttons">
+          <button onclick="startGame()">Start Game</button>
+          <!-- <button onclick="quitGame()">Quit</button> -->
+          <button onclick="nextGame()">Next Game</button>
         </div>
-
-        <button onclick="startGame()">Play Again</button>
       </div>
+    </section>
 
+    <!-- Game Section -->
+    <section id="game-section" class="hidden">
+      <div class="game-box">
+        <div id="timer">Time Left: 60s</div>
+        <div id="word-container"></div>
+        <input type="text" id="user-input" placeholder="Enter missing letters only"/>
+        <button onclick="submitGuess()" id="submit-btn">Submit</button>
+        <button onclick="quitGame()" class="mid-quit">Quit Game</button>
+        <div id="score">Score: 0</div>
+        <div id="high-score">High Score: 0</div>
+        <div id="game-over" class="hidden"></div>
+        <button class="hidden" id="restart-btn" onclick="restartGame()">Restart</button>
+      </div>
+    </section>
+  </div>
+  
       <script src="/BrainBlitz/SCRIPT_Files/wordGuessing.js"></script>
 </body>
 </html>
