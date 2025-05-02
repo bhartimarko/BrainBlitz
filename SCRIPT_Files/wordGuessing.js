@@ -55,9 +55,6 @@ function quitGame() {
   document.getElementById("word-container").textContent = "";
   document.getElementById("game-over").textContent = "";
   document.getElementById("restart-btn").classList.add("hidden");
-
-  // Optional: Alert or log quit status
-  console.log("User quit the game and returned to the main menu.");
 }
 
 function nextGame() {
@@ -68,7 +65,7 @@ function nextGame() {
 
 function showWord() {
   if (index < wordData.length) {
-    document.getElementById("word-container").textContent = wordData[index].masked;
+    document.getElementById("word-container").textContent = wordData[index].word;
     document.getElementById("user-input").value = "";
   } else {
     endGame();
