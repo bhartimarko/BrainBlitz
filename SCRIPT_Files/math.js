@@ -108,7 +108,7 @@ function generateQuestions(){
 
 function shuffle(array){
         return array.sort(()=> Math.random() - 0.5)
-        // randomly shuffeels options to correct answer index 0 me nhi rhega
+        // randomly shuffle options to correct, answer index 0 me nhi rhega
 }
 
 function showQuestion() {
