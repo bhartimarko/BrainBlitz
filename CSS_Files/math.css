@@ -353,18 +353,18 @@ b{
   
   /* Individual Button Colors */
   #start {
-    background: #00ff9d;
-    color: #111;
+    background-color: #4c0070;
+   color: white;
   }
   
   #quit, #quit-2 {
-    background: #ff4d4d;
-    color: #fff;
+    background-color: #4c0070;
+    color: white;
   }
   
   #next-game {
-    background: #0078ff;
-    color: #fff;
+    background-color: #4c0070;
+    color: white;
   }
   
   .option-btn {
