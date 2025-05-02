@@ -1,74 +1,14 @@
-// script.js
-
-// // 1. Words list (10 funky words)
-// const words = ["apple", "brain", "train", "plant", "chair", "spark", "house", "dream", "cloud", "magic"];
-
-// // 2. Randomly selecting one word
-// let selectedWord = words[Math.floor(Math.random() * words.length)];
-
-// // 3. Creating an array for display word where first 2 letters are shown, rest are '_'
-// let displayWord = [];
-// for (let i = 0; i < selectedWord.length; i++) {
-//   if (i < 2) {
-//     displayWord.push(selectedWord[i]); // Pehle 2 letter dikhenge
-//   } else {
-//     displayWord.push("_"); // Baaki hidden rahenge
-//   }
-// }
-
-// // 4. Setting total chances
-// let chancesLeft = 6;
-
-// // 5. Showing the word initially
-// document.getElementById("word-display").innerText = displayWord.join(" ");
-
-// // 6. Adding click event on "Guess" button
-// document.getElementById("guess-btn").addEventListener("click", function() {
-//   const input = document.getElementById("letter-input").value.toLowerCase();
-//   document.getElementById("letter-input").value = "";
-
-//   if (input && input.length === 1) {
-//     let correct = false;
-
-//     // 7. Checking guessed letter in word
-//     for (let i = 0; i < selectedWord.length; i++) {
-//       if (selectedWord[i] === input && displayWord[i] === "_") {
-//         displayWord[i] = input; // Agar match hua, update kar dena
-//         correct = true;
-//       }
-//     }
-
-//     // 8. If not correct, chances kam karo
-//     if (!correct) {
-//       chancesLeft--;
-//     }
-
-//     // 9. Update the display word and chances
-//     document.getElementById("word-display").innerText = displayWord.join(" ");
-//     document.getElementById("chances").innerText = `Chances left: ${chancesLeft}`;
-
-//     // 10. Check win or lose
-//     if (!displayWord.includes("_")) {
-//       document.getElementById("message").innerText = "🎉 You guessed the word! Awesome!";
-//       document.getElementById("guess-btn").disabled = true;
-//     } else if (chancesLeft === 0) {
-//       document.getElementById("message").innerText = `💔 Game Over! The word was "${selectedWord}".`;
-//       document.getElementById("guess-btn").disabled = true;
-//     }
-//   }
-// });
-
 const wordData = [
-  { masked: "a_az_ng", missing: "mi" },
-  { masked: "p__zle", missing: "uz" },
-  { masked: "ki_ko_", missing: "wi" },
-  { masked: "_el_oc_ty", missing: "vi" },
-  { masked: "sy__heti__", missing: "nt" },
-  { masked: "_odepen_e_ce", missing: "ind" },
-  { masked: "com_ut_r", missing: "pe" },
-  { masked: "_rti_ic__", missing: "aa" },
-  { masked: "re__lar", missing: "gu" },
-  { masked: "a_g__ith__", missing: "lor" }
+  { word: "a_az_ng", missing: "mi" },
+  { word: "p__zle", missing: "uz" },
+  { word: "sh_d_w", missing: "ao" },
+  { word: "_eloc_ty", missing: "vi" },
+  { word: "Bu__le", missing: "bb" },
+  { word: "Ro_k_t", missing: "ce" },
+  { word: "com_ut_r", missing: "pe" },
+  { word: "M_rr_r", missing: "io" },
+  { word: "re__lar", missing: "gu" },
+  { word: "C_s_l_e", missing: "ate" }
 ];
 
 let index = 0;
@@ -94,6 +34,12 @@ function startGame() {
 
   showWord();
   timer = setInterval(updateTimer, 1000);
+}
+
+function quitGameFirst(){
+  setTimeout(()=>{
+    window.location.href = "/BrainBlitz/HTML_Files/index.html"
+},500)
 }
 
 function quitGame() {
