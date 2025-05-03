@@ -16,6 +16,3 @@ function quitButton() {
         alert("Thanks for visiting BrainBlitz! Come back soon.");
     })
 }
-
-
-
