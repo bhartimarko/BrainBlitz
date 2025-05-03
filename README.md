@@ -1,5 +1,5 @@
 # BrainBlitz – Daily Logic Puzzle Game
-BrainBlitz is an engaging web-based game project designed to stimulate your mind with fun and challenging puzzles. This project includes four different games that test your problem-solving skills, with a focus on logic, math, and patterns. The games are built using vanilla HTML, CSS, and JavaScript, incorporating various JavaScript concepts to create an interactive and responsive user experience.
+this project includes four different games that test your problem-solving skills, with a focus on logic, math, and patterns. The games are built using vanilla HTML, CSS, and JavaScript, and responsive user experience.
 
 <h2>Games Included </h2>
 <h3>1. Math Game </h3>
